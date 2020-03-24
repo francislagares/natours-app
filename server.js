@@ -15,7 +15,7 @@ const app = require('./app');
 const DB = process.env.DB_CONNECTION.replace('<PASSWORD>', process.env.DB_PASSWORD);
 
 mongoose
-  .connect(process.env.DB_LOCAL, {
+  .connect(DB, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
